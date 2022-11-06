@@ -1,9 +1,6 @@
 # docker-tpm2-tools
 # Latest tpm2-tools from https://github.com/tpm2-software/tpm2-tools/ build inside Docker container.
 
-# docker-tpm2-tools
-# Latest tpm2-tools from https://github.com/tpm2-software/tpm2-tools/ build inside Docker container.
-
 ## How to build
 ```
 docker build -t tpm2-tools .
