@@ -113,3 +113,29 @@ TPM2_PT_NV_BUFFER_MAX:
 TPM2_PT_MODES:
   raw: 0x0
 ```
+
+### Get TPM measurements (PCR values history)
+```
+docker run --privileged -v /sys/kernel/security/:/sys/kernel/security/ -it aospan/tpm2-tools tpm2_eventlog /sys/kernel/security/tpm0/binary_bios_measurements > tpm2_eventlog_pcr.txt
+
+```
+
+Example output on my machine:
+```
+- EventNum: 107
+  PCRIndex: 4
+  EventType: EV_EFI_BOOT_SERVICES_APPLICATION
+  DigestCount: 1
+  Digests:
+  - AlgorithmId: sha256
+    Digest: "3ba11d87f4450f0b92bd53676d88a3622220a7d53f0338bf387badc31cf3c025"
+  EventSize: 32
+  Event:
+    ImageLocationInMemory: 0x630b70c0
+    ImageLengthInMemory: 11543392
+    ImageLinkTimeAddress: 0x0
+    LengthOfDevicePath: 0
+    DevicePath: ''
+```
+
+Only one event listed here for simplicity. [Full log can be found here](tpm2_eventlog_pcr.txt)
