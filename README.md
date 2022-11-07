@@ -65,4 +65,5 @@ Example output on my machine:
 ```
 
 Only one event listed here for simplicity. [Full log can be found here](tpm2_eventlog_pcr.txt)
+
 [Spec for PCR values measurements (PDF)](https://trustedcomputinggroup.org/wp-content/uploads/TCG_EFI_Platform_1_22_Final_-v15.pdf)
